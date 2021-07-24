@@ -36,7 +36,9 @@
     "test:acceptance-wip": "wdio test/acceptance/wdio.wip.conf.js",
     "test:acceptance-headless": "wdio test/acceptance/wdio.headless.conf.js",
     "coverage": "npm_config_coverage=true npm run test:unit",
-    "quality": "plato --recurse --exclude 'node_modules|reports|test|public' --dir reports/plato ."
+    "quality": "plato --recurse --exclude 'node_modules|reports|test|public' --dir reports/plato .",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "author": "Department for International Trade",
   "dependencies": {
@@ -52,7 +54,7 @@
     "express": "^4.14.0",
     "express-partial-templates": "^0.1.0",
     "express-session": "^1.13.0",
-    "hof": "5.0.1",
+    "hof": "12.0.0",
     "hof-transpiler": "0.0.6",
     "hogan-express-strict": "^0.5.4",
     "hogan.js": "^3.0.2",
@@ -74,7 +76,8 @@
     "underscore": "^1.8.3",
     "universal-analytics": "^0.3.10",
     "winston": "^2.1.1",
-    "yamljs": "^0.2.4"
+    "yamljs": "^0.2.4",
+    "snyk": "^1.80.1"
   },
   "devDependencies": {
     "chai": "^3.5.0",
@@ -109,5 +112,6 @@
   },
   "pre-commit": [
     "test"
-  ]
+  ],
+  "snyk": true
 }
