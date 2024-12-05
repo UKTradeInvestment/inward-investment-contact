@@ -28,7 +28,7 @@ module.exports = {
   },
   redis: {
     url: process.env.REDIS_URL || 'redis://localhost:6379',
-    useTLS: process.env.REDIS_USE_TLS || 'false'
+    useTLS: process.env.REDIS_USE_TLS || false
   },
   logLevel: process.env.LOG_LEVEL || 'warn',
   sentry: {
